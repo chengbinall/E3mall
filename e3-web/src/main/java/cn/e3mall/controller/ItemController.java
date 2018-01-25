@@ -21,6 +21,12 @@ public class ItemController {
 	 TbItem tbItem= itemService.findItmById(Itmid);
   return tbItem;	 
  }
+ /**
+  * 查询商品列表的方法
+  * @param page
+  * @param rows
+  * @return
+  */
  @RequestMapping("/item/list")
  @ResponseBody
  public  DataGridResult findItmList(Integer page ,Integer rows){

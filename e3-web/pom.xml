@@ -43,6 +43,11 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-support</artifactId>
 			</dependency>
+			<!-- mybatis的分页插件 -->
+				<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+			</dependency>
 			<!-- JSP相关 -->
 			<dependency>
 				<groupId>jstl</groupId>
