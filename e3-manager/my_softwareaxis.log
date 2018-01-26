@@ -1606,3 +1606,156 @@ java.lang.IllegalStateException: Serialized class cn.e3mall.pojo.TreeNode must i
 2018-01-25 19:48:23,429 2401   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.254.8.164:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=6188&side=provider&timeout=500000&timestamp=1516880903409, urls: [empty://10.254.8.164:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=6188&side=provider&timeout=500000&timestamp=1516880903409], dubbo version: 2.5.3, current host: 127.0.0.1
 2018-01-25 19:48:23,435 2407   [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 2406 ms
 2018-01-25 19:49:15,119 54091  [:20880-thread-2] INFO  aba.druid.pool.DruidDataSource  - {dataSource-1} inited
+2018-01-26 14:47:19,349 0      [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+2018-01-26 14:47:19,420 71     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing Root WebApplicationContext: startup date [Fri Jan 26 14:47:19 GMT+08:00 2018]; root of context hierarchy
+2018-01-26 14:47:19,551 202    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [E:\eclipse工作空间\e3mall\e3-manager\e3-manager-service\target\classes\spring\applicationContext-dao.xml]
+2018-01-26 14:47:19,628 279    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [E:\eclipse工作空间\e3mall\e3-manager\e3-manager-service\target\classes\spring\applicationContext-service.xml]
+2018-01-26 14:47:19,738 389    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-01-26 14:47:19,761 412    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [E:\eclipse工作空间\e3mall\e3-manager\e3-manager-service\target\classes\spring\applicationContext-trsaction.xml]
+2018-01-26 14:47:19,901 552    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [conf/db.properties]
+2018-01-26 14:47:19,909 560    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-01-26 14:47:20,871 1522   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: cn.e3mall.service.ItemService, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:47:20,954 1605   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service cn.e3mall.service.ItemService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:47:20,954 1605   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service cn.e3mall.service.ItemService to url dubbo://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=15640&side=provider&timeout=500000&timestamp=1516949240889, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:47:20,955 1606   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service cn.e3mall.service.ItemService url dubbo://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=15640&side=provider&timeout=500000&timestamp=1516949240889 to registry registry://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-manager&dubbo=2.5.3&pid=15640&registry=zookeeper&timestamp=1516949240876, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:47:21,096 1747   [ost-startStop-1] INFO  oting.transport.AbstractServer  -  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.254.5.43:20880, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:47:21,229 1880   [168.25.128:2181] INFO  .I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+2018-01-26 14:47:21,241 1892   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:host.name=CB-PC
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.7.0_72
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.home=E:\develop\Java\jdk1.7.0_72\jre
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=E:\develop\mven\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=E:\develop\Java\jdk1.7.0_72\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:/develop/Java/jdk1.7.0_72/bin/../jre/bin/client;E:/develop/Java/jdk1.7.0_72/bin/../jre/bin;E:/develop/Java/jdk1.7.0_72/bin/../jre/lib/i386;E:\develop\Java\jdk1.7.0_72\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\develop\MySQL\MySQL Server 5.5\bin;E:\develop\MySQL\MySQL Server 5.5\bin;E:\MySQL\MySQL Server 5.5\bin;C:\Program Files\VisualSVN Server\bin;E:\develop\TortoiseSVN\bin;E:\develop\mven\apache-maven-3.3.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;E:\gitClone\bin;C:\Users\98448\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;E:\develop\eclipse;;.
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=C:\Users\98448\AppData\Local\Temp\
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Windows 8.1
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=x86
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.version=6.3
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.name=98448
+2018-01-26 14:47:21,242 1893   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.home=C:\Users\98448
+2018-01-26 14:47:21,244 1895   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=E:\eclipse工作空间\e3mall\e3-manager
+2018-01-26 14:47:21,245 1896   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@1cb6ca2
+2018-01-26 14:47:21,263 1914   [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:22,269 2920   [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:23,376 4027   [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:24,381 5032   [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:25,481 6132   [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:26,484 7135   [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:27,585 8236   [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:28,588 9239   [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:29,690 10341  [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:30,694 11345  [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:31,796 12447  [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:32,798 13449  [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:33,900 14551  [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:34,904 15555  [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:36,004 16655  [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:37,008 17659  [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:38,112 18763  [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:39,116 19767  [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:40,218 20869  [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:41,220 21871  [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:47:42,321 22972  [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:47:43,324 23975  [68.25.128:2181)] WARN  rg.apache.zookeeper.ClientCnxn  - Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:739)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+2018-01-26 14:53:34,098 0      [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization started
+2018-01-26 14:53:34,174 76     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing Root WebApplicationContext: startup date [Fri Jan 26 14:53:34 GMT+08:00 2018]; root of context hierarchy
+2018-01-26 14:53:34,210 112    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [E:\eclipse工作空间\e3mall\e3-manager\e3-manager-service\target\classes\spring\applicationContext-dao.xml]
+2018-01-26 14:53:34,292 194    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [E:\eclipse工作空间\e3mall\e3-manager\e3-manager-service\target\classes\spring\applicationContext-service.xml]
+2018-01-26 14:53:34,393 295    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-01-26 14:53:34,416 318    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from file [E:\eclipse工作空间\e3mall\e3-manager\e3-manager-service\target\classes\spring\applicationContext-trsaction.xml]
+2018-01-26 14:53:34,648 550    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [conf/db.properties]
+2018-01-26 14:53:34,654 556    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-01-26 14:53:35,831 1733   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: cn.e3mall.service.ItemService, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:35,912 1814   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service cn.e3mall.service.ItemService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:35,912 1814   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service cn.e3mall.service.ItemService to url dubbo://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=4924&side=provider&timeout=500000&timestamp=1516949615849, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:35,912 1814   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service cn.e3mall.service.ItemService url dubbo://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=4924&side=provider&timeout=500000&timestamp=1516949615849 to registry registry://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-manager&dubbo=2.5.3&pid=4924&registry=zookeeper&timestamp=1516949615835, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,051 1953   [ost-startStop-1] INFO  oting.transport.AbstractServer  -  [DUBBO] Start NettyServer bind /0.0.0.0:20880, export /10.254.5.43:20880, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,075 1977   [168.25.128:2181] INFO  .I0Itec.zkclient.ZkEventThread  - Starting ZkClient event thread.
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:host.name=CB-PC
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.version=1.7.0_72
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.vendor=Oracle Corporation
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.home=E:\develop\Java\jdk1.7.0_72\jre
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.class.path=E:\develop\mven\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.library.path=E:\develop\Java\jdk1.7.0_72\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;E:/develop/Java/jdk1.7.0_72/bin/../jre/bin/client;E:/develop/Java/jdk1.7.0_72/bin/../jre/bin;E:/develop/Java/jdk1.7.0_72/bin/../jre/lib/i386;E:\develop\Java\jdk1.7.0_72\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;D:\develop\MySQL\MySQL Server 5.5\bin;E:\develop\MySQL\MySQL Server 5.5\bin;E:\MySQL\MySQL Server 5.5\bin;C:\Program Files\VisualSVN Server\bin;E:\develop\TortoiseSVN\bin;E:\develop\mven\apache-maven-3.3.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;E:\gitClone\bin;C:\Users\98448\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;E:\develop\eclipse;;.
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.io.tmpdir=C:\Users\98448\AppData\Local\Temp\
+2018-01-26 14:53:36,084 1986   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:java.compiler=<NA>
+2018-01-26 14:53:36,085 1987   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.name=Windows 8.1
+2018-01-26 14:53:36,085 1987   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.arch=x86
+2018-01-26 14:53:36,085 1987   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:os.version=6.3
+2018-01-26 14:53:36,085 1987   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.name=98448
+2018-01-26 14:53:36,085 1987   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.home=C:\Users\98448
+2018-01-26 14:53:36,085 1987   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Client environment:user.dir=E:\eclipse工作空间\e3mall\e3-manager
+2018-01-26 14:53:36,086 1988   [ost-startStop-1] INFO  org.apache.zookeeper.ZooKeeper  - Initiating client connection, connectString=192.168.25.128:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@1ab6947
+2018-01-26 14:53:36,105 2007   [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Opening socket connection to server 192.168.25.128/192.168.25.128:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-26 14:53:36,106 2008   [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Socket connection established to 192.168.25.128/192.168.25.128:2181, initiating session
+2018-01-26 14:53:36,129 2031   [68.25.128:2181)] INFO  rg.apache.zookeeper.ClientCnxn  - Session establishment complete on server 192.168.25.128/192.168.25.128:2181, sessionid = 0x16132f4408e0000, negotiated timeout = 30000
+2018-01-26 14:53:36,130 2032   [p-1-EventThread] INFO    org.I0Itec.zkclient.ZkClient  - zookeeper state changed (SyncConnected)
+2018-01-26 14:53:36,132 2034   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=4924&side=provider&timeout=500000&timestamp=1516949615849, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,159 2061   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=4924&side=provider&timeout=500000&timestamp=1516949615849, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,187 2089   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=4924&side=provider&timeout=500000&timestamp=1516949615849, urls: [empty://10.254.5.43:20880/cn.e3mall.service.ItemService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemService&methods=findItmList,findItmById&pid=4924&side=provider&timeout=500000&timestamp=1516949615849], dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,211 2113   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] The service ready on spring started. service: cn.e3mall.service.ItemCatService, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,218 2120   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service cn.e3mall.service.ItemCatService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,218 2120   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Export dubbo service cn.e3mall.service.ItemCatService to url dubbo://10.254.5.43:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=4924&side=provider&timeout=500000&timestamp=1516949616214, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,218 2120   [ost-startStop-1] INFO  ba.dubbo.config.AbstractConfig  -  [DUBBO] Register dubbo service cn.e3mall.service.ItemCatService url dubbo://10.254.5.43:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=4924&side=provider&timeout=500000&timestamp=1516949616214 to registry registry://192.168.25.128:2181/com.alibaba.dubbo.registry.RegistryService?application=e3-manager&dubbo=2.5.3&pid=4924&registry=zookeeper&timestamp=1516949616214, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,219 2121   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Register: dubbo://10.254.5.43:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=4924&side=provider&timeout=500000&timestamp=1516949616214, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,228 2130   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Subscribe: provider://10.254.5.43:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=4924&side=provider&timeout=500000&timestamp=1516949616214, dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,234 2136   [ost-startStop-1] INFO  ry.zookeeper.ZookeeperRegistry  -  [DUBBO] Notify urls for subscribe url provider://10.254.5.43:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=4924&side=provider&timeout=500000&timestamp=1516949616214, urls: [empty://10.254.5.43:20880/cn.e3mall.service.ItemCatService?anyhost=true&application=e3-manager&category=configurators&check=false&dubbo=2.5.3&interface=cn.e3mall.service.ItemCatService&methods=getIntemCatList&pid=4924&side=provider&timeout=500000&timestamp=1516949616214], dubbo version: 2.5.3, current host: 127.0.0.1
+2018-01-26 14:53:36,237 2139   [ost-startStop-1] INFO  work.web.context.ContextLoader  - Root WebApplicationContext: initialization completed in 2138 ms
+2018-01-26 14:55:47,403 133305 [:20880-thread-2] INFO  aba.druid.pool.DruidDataSource  - {dataSource-1} inited
