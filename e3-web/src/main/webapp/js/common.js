@@ -66,12 +66,14 @@ var E3 = {
     initPicUpload : function(data){
     	$(".picFileUpload").each(function(i,e){
     		var _ele = $(e);
+    		//清除以前添加的标签
     		_ele.siblings("div.pics").remove();
+    		//在这个上传图片按钮的后面添加一个div，作用是回显示上传成功后的图片哦
     		_ele.after('\
     			<div class="pics">\
         			<ul></ul>\
         		</div>');
-    		// 回显图片
+    		// 回显图片，这个是商品修改页面的业务逻辑了。我们商品添加不会进入里面的
         	if(data && data.pics){
         		var imgs = data.pics.split(",");
         		for(var i in imgs){
@@ -82,6 +84,7 @@ var E3 = {
         	}
         	//给“上传图片按钮”绑定click事件
         	$(e).click(function(){
+        		//找到form表单，为的是到时候提交的时候里面有上传的图片信息。
         		var form = $(this).parentsUntil("form").parent("form");
         		//打开图片上传窗口
         		KindEditor.editor(E3.kingEditorParams).loadPlugin('multiimage',function(){
@@ -89,10 +92,12 @@ var E3 = {
         			editor.plugin.multiImageDialog({
 						clickFn : function(urlList) {
 							var imgArray = [];
+							//KindEditor里面有上传的图片的URL地址，然后遍历依次添加到form表单里面
 							KindEditor.each(urlList, function(i, data) {
 								imgArray.push(data.url);
 								form.find(".pics ul").append("<li><a href='"+data.url+"' target='_blank'><img src='"+data.url+"' width='80' height='50' /></a></li>");
 							});
+							//添加图片的信息到URL到form表单的隐藏域里。
 							form.find("[name=image]").val(imgArray.join(","));
 							editor.hideDialog();
 						}
