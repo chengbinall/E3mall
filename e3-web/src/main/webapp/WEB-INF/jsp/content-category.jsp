@@ -38,7 +38,13 @@ $(function(){
         			}
         		});
         	}else{
-        		$.post("/content/category/update",{id:node.id,name:node.text});
+        		$.post("/content/category/update",{id:node.id,name:node.text},function(data){
+        			if(data.status==200){
+        				$.messager.alert('提示','重命名'+node.text+' 成功了!');
+        			}else{
+        				$.messager.alert('提示','重命名'+node.text+' 失败!');
+        			}
+        		});
         	}
         }
 	});
@@ -62,10 +68,23 @@ function menuHandler(item){
 	}else if(item.name === "delete"){
 		$.messager.confirm('确认','确定删除名为 '+node.text+' 的分类吗？',function(r){
 			if(r){
-				$.post("/content/category/delete/",{id:node.id},function(){
-					tree.tree("remove",node.target);
-				});	
-			}
+				//判断是否选择的是父节点，如果是就弹出提示框，请先删除子节点
+			/* 	if(node.state=="closed"){ */
+					//表示选择的是父节点，就弹出提示框
+				/* 	$.messager.alert("警告","请先删除该节点下面的子节点","error");
+				}else{ */
+					$.post("/content/category/delete/",{id:node.id},function(data){
+						if(data.status==200){
+							$.messager.alert('我的消息','删除操作成功','info',function(){
+								//删除该节点
+								tree.tree("remove",node.target);	
+							});
+						}else{
+						$.messager.alert("警告","删除该分类失败了","error");
+						}
+					});
+				/* } */
+			};
 		});
 	}
 }

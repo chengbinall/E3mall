@@ -17,7 +17,7 @@
         </tr>
     </thead>
 </table>
-<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'/rest/page/item-edit'" style="width:80%;height:80%;padding:10px;">
+<div id="itemEditWindow" class="easyui-window" title="编辑商品" data-options="modal:true,closed:true,iconCls:'icon-save',href:'item-edit'" style="width:80%;height:80%;padding:10px;">
 </div>
 <script>
 
@@ -26,7 +26,10 @@
     	var sels = itemList.datagrid("getSelections");
     	var ids = [];
     	for(var i in sels){
-    		ids.push(sels[i].id);
+    		//判断该商品的状态是否是正常状态，如果是正常才添加到id到数组里面。
+    		if(sels[i].status==1){
+    			ids.push(sels[i].id);
+    		}
     	}
     	ids = ids.join(",");
     	return ids;
@@ -56,48 +59,23 @@
         		onLoad :function(){
         			//回显数据
         			var data = $("#itemList").datagrid("getSelections")[0];
+        			//格式化价格将分转换为元
         			data.priceView = E3.formatPrice(data.price);
+        			//然后将选中的这行数据赋值到form表单里面
         			$("#itemeEditForm").form("load",data);
         			
-        			// 加载商品描述
-        			$.getJSON('/rest/item/query/item/desc/'+data.id,function(_data){
-        				if(_data.status == 200){
+        			// 加载商品描述，这个需要我们自己向后台提交数据的哦。'/rest/item/query/item/desc/
+        			$.post('/query/item/desc?itemId='+data.id,function(_data){
+        				if(_data.status == 1){
         					//UM.getEditor('itemeEditDescEditor').setContent(_data.data.itemDesc, false);
+        					//这表示查询成功哦，然后回显数据哦。
         					itemEditEditor.html(_data.data.itemDesc);
         				}
         			});
-        			
-        			//加载商品规格
-        			$.getJSON('/rest/item/param/item/query/'+data.id,function(_data){
-        				if(_data && _data.status == 200 && _data.data && _data.data.paramData){
-        					$("#itemeEditForm .params").show();
-        					$("#itemeEditForm [name=itemParams]").val(_data.data.paramData);
-        					$("#itemeEditForm [name=itemParamId]").val(_data.data.id);
-        					
-        					//回显商品规格
-        					 var paramData = JSON.parse(_data.data.paramData);
-        					
-        					 var html = "<ul>";
-        					 for(var i in paramData){
-        						 var pd = paramData[i];
-        						 html+="<li><table>";
-        						 html+="<tr><td colspan=\"2\" class=\"group\">"+pd.group+"</td></tr>";
-        						 
-        						 for(var j in pd.params){
-        							 var ps = pd.params[j];
-        							 html+="<tr><td class=\"param\"><span>"+ps.k+"</span>: </td><td><input autocomplete=\"off\" type=\"text\" value='"+ps.v+"'/></td></tr>";
-        						 }
-        						 
-        						 html+="</li></table>";
-        					 }
-        					 html+= "</ul>";
-        					 $("#itemeEditForm .params td").eq(1).html(html);
-        				}
-        			});
-        			
+        			//下面赋值的参数是在common里面回显数据的，也是区分和商品添加页面的按钮的不同
         			E3.init({
-        				"pics" : data.image,
-        				"cid" : data.cid,
+        				"pics" : data.image,    //后台common.js文件里面会按照逗号切割的，然后回显图片
+        				"cid" : data.cid,       //赋值给商品的类目，这里有一个缺陷就是在商品修改的页面上回显示该id的
         				fun:function(node){
         					E3.changeItemParam(node, "itemeEditForm");
         				}
@@ -111,7 +89,7 @@
         handler:function(){
         	var ids = getSelectionsIds();
         	if(ids.length == 0){
-        		$.messager.alert('提示','未选中商品!');
+        		$.messager.alert('提示','请选择至少一个状态为正常的商品进行删除');
         		return ;
         	}
         	$.messager.confirm('确认','确定删除ID为 '+ids+' 的商品吗？',function(r){
@@ -122,6 +100,8 @@
             				$.messager.alert('提示','删除商品成功!',undefined,function(){
             					$("#itemList").datagrid("reload");
             				});
+            			}else{
+            				$.messager.alert('提示','删除商品失败了')
             			}
             		});
         	    }
@@ -133,7 +113,7 @@
         handler:function(){
         	var ids = getSelectionsIds();
         	if(ids.length == 0){
-        		$.messager.alert('提示','未选中商品!');
+        		$.messager.alert('提示','请选择至少一个状态为正常的商品进行下架');
         		return ;
         	}
         	$.messager.confirm('确认','确定下架ID为 '+ids+' 的商品吗？',function(r){

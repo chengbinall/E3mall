@@ -13,7 +13,6 @@
              <!-- 加载配置文件  -->
              <context:property-placeholder location="classpath:conf/Resoure.properties"/>
 	<mvc:annotation-driven />
-	<!--加载静态文件  -->
 	<!-- 处理静态文件的问题 -->
 	<mvc:default-servlet-handler/>
 	<bean	class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -24,8 +23,10 @@
 		<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-manager-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.128:2181"/>	
-	<dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService" />
-     <dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService" />
+	<dubbo:reference interface="cn.e3mall.service.ItemService" id="itemService"/>
+     <dubbo:reference interface="cn.e3mall.service.ItemCatService" id="itemCatService"/>
+      <dubbo:reference interface="cn.e3mall.protal.service.ContentCatService" id="contentCatService"/>
+      <dubbo:reference interface="cn.e3mall.protal.service.ContentService" id="contentService"/>
      <!--定义上传文件解析器  -->
      <bean id="multipartResolver"
     class="org.springframework.web.multipart.commons.CommonsMultipartResolver">

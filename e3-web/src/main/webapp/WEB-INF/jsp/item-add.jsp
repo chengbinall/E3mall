@@ -106,9 +106,37 @@
 		//ajax的post方式提交表单
 		//$("#itemAddForm").serialize()将表单序列号为key-value形式的字符串
 		$.post("/item/save",$("#itemAddForm").serialize(), function(data){
-			if(data.status == 200){
+			if(data.status==1){
 				$.messager.alert('提示','新增商品成功!');
+				//询问客户是否继续添加。如果继续添加就清空表格否就跳转到查询商品的页面了哦
+				$.messager.confirm('确认','您确认想要继续添加商品吗？',function(r){    
+               if (r){    
+        //继续添加，清空表单里面的数据需要注意的是我们这里使用的重新赋值的方式哦
+         		$('#itemAddForm').form('reset');
+         		itemAddEditor.html('');
+        }else{
+        	
+        	//打开查询所有的tabls
+        	var tabs = $("#tabs");
+        	//关闭这个table
+        	tabs.tabs("close","新增商品")
+			var tab = tabs.tabs("getTab",'查询商品');
+			if(tab){
+				//然后先选中它然后让他发送数据
+				tabs.tabs("select","查询商品");
 			}else{
+				//表示没有打开，就新建一个table选项卡
+				tabs.tabs('add',{
+				    title:'查询商品',
+				    href: 'item-list',
+				    closable:true,
+				    bodyCls:"content"
+				});
+			}
+        
+        }   
+});  
+		}else{
 				$.messager.alert('提示','新增商品失败咯!');
 			}
 		});
