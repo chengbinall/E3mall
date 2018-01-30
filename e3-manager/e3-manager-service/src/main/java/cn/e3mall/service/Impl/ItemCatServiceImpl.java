@@ -1,4 +1,4 @@
-package cn.e3mall.serviceImpl;
+package cn.e3mall.service.Impl;
 
 import java.util.ArrayList;
 import java.util.List;
