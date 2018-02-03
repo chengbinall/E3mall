@@ -71,6 +71,9 @@
 						$.messager.alert('提示','新增内容成功!');
     					$("#contentList").datagrid("reload");
     					E3.closeCurrentWindow();
+					}else{
+						$.messager.alert('提示','新增内容失败!');
+						$("#contentList").datagrid("reload");
 					}
 				});
 			},

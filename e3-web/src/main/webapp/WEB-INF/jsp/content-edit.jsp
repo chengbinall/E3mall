@@ -68,14 +68,18 @@ var contentEditPage = {
 			
 			$.post("/rest/content/edit",$("#contentEditForm").serialize(), function(data){
 				if(data.status == 200){
-					$.messager.alert('提示','新增内容成功!');
+					$.messager.alert('提示','修改内容成功!');
 					$("#contentList").datagrid("reload");
 					E3.closeCurrentWindow();
+				}else{
+					$.messager.alert('提示','修改内容失败!');
+					$("#contentList").datagrid("reload");
 				}
 			});
 		},
 		clearForm : function(){
-			
+			$('#contentAddForm').form('reset');
+			contentAddEditor.html('');
 		}
 };
 

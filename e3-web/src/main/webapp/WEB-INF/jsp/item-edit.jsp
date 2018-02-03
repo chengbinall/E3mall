@@ -107,7 +107,7 @@
 					$("#itemList").datagrid("reload");
 				});
 			}else{
-				$.messager.alert("提示","修改商品失败，请稍后再提交")；
+				$.messager.alert("提示","修改商品失败，请稍后再提交")
 			}
 		});
 	}
