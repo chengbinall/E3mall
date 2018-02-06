@@ -125,7 +125,6 @@ private String hashKey;
 			   if(StringUtils.isNotBlank(hget)){
 				// A  有，我们就直接从Redis里面获取数据，然后返回
 				   List<TbContent> list = JsonUtils.jsonToList(hget, TbContent.class);
-				   int i= 1/0;
 				   return list;
 			   }
 		} catch (Exception e) {
