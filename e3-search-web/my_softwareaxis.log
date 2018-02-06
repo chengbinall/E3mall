@@ -1,0 +1,50 @@
+2018-02-03 21:31:09,640 0      [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization started
+2018-02-03 21:31:09,656 16     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Sat Feb 03 21:31:09 GMT+08:00 2018]; root of context hierarchy
+2018-02-03 21:31:09,684 44     [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [springMvc/SpringMvc.xml]
+2018-02-03 21:31:09,868 228    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-02-03 21:31:10,030 390    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [conf/Resoure.properties]
+2018-02-03 21:31:10,034 394    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-03 21:31:10,388 748    [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sat Feb 03 21:31:09 GMT+08:00 2018]; root of context hierarchy
+2018-02-03 21:31:10,424 784    [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sat Feb 03 21:31:09 GMT+08:00 2018]; root of context hierarchy
+2018-02-03 21:31:10,472 832    [ost-startStop-1] INFO  andler.SimpleUrlHandlerMapping  - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-02-03 21:31:10,527 887    [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization completed in 886 ms
+2018-02-03 21:37:01,910 0      [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization started
+2018-02-03 21:37:01,964 54     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Sat Feb 03 21:37:01 GMT+08:00 2018]; root of context hierarchy
+2018-02-03 21:37:02,023 113    [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [springMvc/SpringMvc.xml]
+2018-02-03 21:37:02,438 528    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-02-03 21:37:02,647 737    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [conf/Resoure.properties]
+2018-02-03 21:37:02,653 743    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-03 21:37:03,447 1537   [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sat Feb 03 21:37:01 GMT+08:00 2018]; root of context hierarchy
+2018-02-03 21:37:03,566 1656   [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sat Feb 03 21:37:01 GMT+08:00 2018]; root of context hierarchy
+2018-02-03 21:37:03,715 1805   [ost-startStop-1] INFO  andler.SimpleUrlHandlerMapping  - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-02-03 21:37:03,986 2076   [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization completed in 2074 ms
+2018-02-04 00:45:58,632 0      [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization started
+2018-02-04 00:45:58,655 23     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 00:45:58 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 00:45:58,695 63     [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [springMvc/SpringMvc.xml]
+2018-02-04 00:45:58,971 339    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-02-04 00:45:59,100 468    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [conf/Resoure.properties]
+2018-02-04 00:45:59,105 473    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-04 00:45:59,628 996    [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 00:45:58 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 00:45:59,700 1068   [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 00:45:58 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 00:45:59,792 1160   [ost-startStop-1] INFO  andler.SimpleUrlHandlerMapping  - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-02-04 00:45:59,976 1344   [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization completed in 1343 ms
+2018-02-04 11:31:05,179 0      [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization started
+2018-02-04 11:31:05,205 26     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 11:31:05 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 11:31:05,264 85     [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [springMvc/SpringMvc.xml]
+2018-02-04 11:31:05,509 330    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-02-04 11:31:05,777 598    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [conf/Resoure.properties]
+2018-02-04 11:31:05,782 603    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-04 11:31:06,403 1224   [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 11:31:05 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 11:31:06,505 1326   [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 11:31:05 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 11:31:06,580 1401   [ost-startStop-1] INFO  andler.SimpleUrlHandlerMapping  - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-02-04 11:31:06,681 1502   [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization completed in 1499 ms
+2018-02-04 14:37:43,577 0      [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization started
+2018-02-04 14:37:43,598 21     [ost-startStop-1] INFO  pport.XmlWebApplicationContext  - Refreshing WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 14:37:43 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 14:37:43,635 58     [ost-startStop-1] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [springMvc/SpringMvc.xml]
+2018-02-04 14:37:43,895 318    [ost-startStop-1] INFO  bo.common.logger.LoggerFactory  - using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+2018-02-04 14:37:44,019 442    [ost-startStop-1] INFO  tySourcesPlaceholderConfigurer  - Loading properties file from class path resource [conf/Resoure.properties]
+2018-02-04 14:37:44,023 446    [ost-startStop-1] INFO  redAnnotationBeanPostProcessor  - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2018-02-04 14:37:44,566 989    [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 14:37:43 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 14:37:44,635 1058   [ost-startStop-1] INFO  n.RequestMappingHandlerAdapter  - Looking for @ControllerAdvice: WebApplicationContext for namespace 'springMvc-servlet': startup date [Sun Feb 04 14:37:43 GMT+08:00 2018]; root of context hierarchy
+2018-02-04 14:37:44,718 1141   [ost-startStop-1] INFO  andler.SimpleUrlHandlerMapping  - Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+2018-02-04 14:37:44,892 1315   [ost-startStop-1] INFO  .web.servlet.DispatcherServlet  - FrameworkServlet 'springMvc': initialization completed in 1314 ms
