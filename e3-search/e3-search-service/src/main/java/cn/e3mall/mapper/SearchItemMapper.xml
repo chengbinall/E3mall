@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.e3mall.mapper.SearchItemMapper" >
+<select id="getSearItemList"  resultType="cn.e3mall.pojo.SeachItem" >
+	SELECT
+			a.id,
+			a.title,
+			a.sell_point,
+			a.price,
+			a.image,
+			b.`name` category_name
+		FROM
+			`tb_item` a
+		LEFT JOIN tb_item_cat b ON a.cid = b.id
+		WHERE a.`status`=1
+	</select>
+	<select id="findSearchItemById"  parameterType="long" resultType="cn.e3mall.pojo.SeachItem" >
+	SELECT
+			a.id,
+			a.title,
+			a.sell_point,
+			a.price,
+			a.image,
+			b.`name` category_name
+		FROM
+			`tb_item` a
+		LEFT JOIN tb_item_cat b ON a.cid = b.id
+		WHERE a.`status`=1 and a.id=#{id}
+	</select>
+	<select id="findSearchItemByIdAndStats"  parameterType="long" resultType="cn.e3mall.pojo.SeachItem" >
+	SELECT
+			a.id,
+			a.title,
+			a.sell_point,
+			a.price,
+			a.image,
+			b.`name` category_name
+		FROM
+			`tb_item` a
+		LEFT JOIN tb_item_cat b ON a.cid = b.id
+		WHERE a.`status`=3 and a.id=#{id}
+	</select>
+</mapper>
