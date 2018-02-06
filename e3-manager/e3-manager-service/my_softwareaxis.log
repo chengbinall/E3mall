@@ -1,0 +1,8 @@
+2018-02-06 15:20:22,461 0      [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@129b073: startup date [Tue Feb 06 15:20:22 GMT+08:00 2018]; root of context hierarchy
+2018-02-06 15:20:22,533 72     [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [spring/applicationContext-MQ.xml]
+2018-02-06 15:21:51,190 0      [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3a19a0: startup date [Tue Feb 06 15:21:51 GMT+08:00 2018]; root of context hierarchy
+2018-02-06 15:21:51,258 68     [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [spring/applicationContext-MQ.xml]
+2018-02-06 15:21:51,692 502    [           main] INFO  ection.SingleConnectionFactory  - Established shared JMS Connection: ActiveMQConnection {id=ID:CB-PC-51806-1517901711581-1:1,clientId=null,started=false}
+2018-02-06 16:05:19,446 0      [           main] INFO  ClassPathXmlApplicationContext  - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b41541: startup date [Tue Feb 06 16:05:19 GMT+08:00 2018]; root of context hierarchy
+2018-02-06 16:05:19,504 58     [           main] INFO  ry.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [spring/applicationContext-MQ.xml]
+2018-02-06 16:05:19,967 521    [           main] INFO  ection.SingleConnectionFactory  - Established shared JMS Connection: ActiveMQConnection {id=ID:CB-PC-53070-1517904319853-1:1,clientId=null,started=false}

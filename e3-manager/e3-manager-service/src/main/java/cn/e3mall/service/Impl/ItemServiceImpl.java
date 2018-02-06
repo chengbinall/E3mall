@@ -2,7 +2,15 @@ package cn.e3mall.service.Impl;
 
 import java.util.Date;
 import java.util.List;
+
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.Session;
+import javax.jms.TextMessage;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.druid.util.StringUtils;
@@ -25,6 +33,8 @@ public class ItemServiceImpl implements ItemService {
 	public  TbItemMapper  tbItemMapper;
 	@Autowired
 	public  TbItemDescMapper  tbItemDescMapper;
+	@Autowired
+	private JmsTemplate jmsTemplate;
 	@Override
 	public TbItem findItmById(long itmId) {
 		TbItem tbItem = tbItemMapper.selectByPrimaryKey(itmId);
@@ -58,7 +68,7 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public Integer save(String desc, TbItem tbItem){
 		//生成商品的id，同过工具类生成
-		long itemId = IDUtils.genItemId();
+		final long itemId = IDUtils.genItemId();
 		tbItem.setId(itemId);
 		//手动添加商品里面没有缺少的参数值
 		tbItem.setCreated(new Date());
@@ -76,6 +86,14 @@ public class ItemServiceImpl implements ItemService {
 		int insertSelective = tbItemDescMapper.insertSelective(tbItemDesc);
 		if(insertSelective==1&&insert==1){
 			//添加成功了哦
+		//在返回之前通过mq方送一条消息。messageCreator
+			jmsTemplate.send(new MessageCreator() {
+				@Override
+				public Message createMessage(Session session) throws JMSException {
+					TextMessage textMessage = session.createTextMessage("add,"+itemId);
+					return textMessage;
+				}
+			});
 			return 1;
 		}
 		return 0;
@@ -96,7 +114,7 @@ public class ItemServiceImpl implements ItemService {
 		//修改商品表,需要注意的是这里的修改是如果上传的没有这个值就不修改数据库的该字段哦
 		int updateItem = tbItemMapper.updateByPrimaryKeySelective(tbItem);
 		//创建商品描述对象
-		TbItemDesc itemDesc = new TbItemDesc();
+		final TbItemDesc itemDesc = new TbItemDesc();
 		//赋值参数
 		itemDesc.setItemDesc(desc);
 		itemDesc.setItemId(tbItem.getId());
@@ -104,6 +122,13 @@ public class ItemServiceImpl implements ItemService {
 		//修改商品描述表
 		int updateBItemDesc = tbItemDescMapper.updateByPrimaryKeySelective(itemDesc);
 		if(updateBItemDesc==1&&updateItem==1){
+			jmsTemplate.send(new MessageCreator() {
+				@Override
+				public Message createMessage(Session session) throws JMSException {
+					TextMessage textMessage = session.createTextMessage("add,"+itemDesc.getItemId());
+					return textMessage;
+				}
+			});
 			return 1;
 		}
 		return 0;
@@ -132,7 +157,18 @@ public class ItemServiceImpl implements ItemService {
 				return result;
 			}
 		}
-		//返回的狀態值時200 表示刪除成功了。
+		//返回的狀態值時200 表示刪除成功了,然后遍历这个集合，依次发送消息。。
+		for (String id : itmIds) {
+			final String itmId=id;
+			jmsTemplate.send(new MessageCreator() {
+				@Override
+				public Message createMessage(Session session) throws JMSException {
+					TextMessage textMessage =session.createTextMessage("del,"+itmId);
+					return textMessage;
+				}
+			});
+		}
+		
 		return E3Result.ok(ids);
 	}
 }
